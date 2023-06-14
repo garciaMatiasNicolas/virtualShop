@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // MIDDELWERES //
-app.use(cors({ origin: '*' }));
+app.use(cors({ credentials:true, origin: 'http://localhost:3000' }));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 

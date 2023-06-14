@@ -17,3 +17,16 @@
   color: white;
   font-weight: 200;
 }
+
+.animation {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

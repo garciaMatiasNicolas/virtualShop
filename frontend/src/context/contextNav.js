@@ -5,10 +5,17 @@ const NavContext = createContext([]);
 
 const Provider = ({children}) => {
     const [navValue, setNavValue] = useState('');
-    
+    const [loggedIn, setLoggedIn] = useState(false);
+    const [component, setComponent] = useState('logIn');
+
+
     const context = {
-        navValue,
-        setNavValue
+        navValue, // For sidebar
+        setNavValue, // For sidebar
+        component, // For login
+        setComponent, // For login 
+        loggedIn,
+        setLoggedIn
     }
 
     return(

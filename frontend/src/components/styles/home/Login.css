@@ -1,28 +1,11 @@
 button {
-    background-color: #22715E;
-    border: none;
-    padding: 5px;
-    color: white;
+  background-color: #22715E;
+  border: none;
+  padding: 5px;
+  color: white;
 }
 
 button:hover {
-    transition: ease 0.5s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.185);
+  transition: ease 0.5s;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.185);
 }
-
-.animation {
-    animation: fade 1s;
-}
-
-.animation2 {
-    animation: fade 1s;
-}
-
-@keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }

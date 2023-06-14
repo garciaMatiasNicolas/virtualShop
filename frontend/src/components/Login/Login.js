@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import '../styles/home/Login.css';
+import img from '../../assets/4530199.jpg';
+import logo from '../../assets/logo.png';
+import { NavContext } from '../../context/contextNav';
+import SignInForm from './SignInForm';
 import LoginForm from './LoginForm';
-import img from '../../../assets/4530199.jpg';
-import logo from '../../../assets/logo.png';
 
 const Login = () => {
+
+  let { component } = useContext(NavContext);
+  let render;
+  if (component == 'logIn') render = <LoginForm/>;
+  if (component == 'signIn') render = <SignInForm/>;
+
   return (
     <div>
       <div className="row w-100">
@@ -14,10 +23,10 @@ const Login = () => {
             </div>
             <h1 className='subtitles w-100' style={{color:'#22715E', fontSize:'2rem', maxWidth:'325px'}}>Gestiona tu tienda</h1>
           </div>
-          <LoginForm/>
+          {render}
         </div>
         <div className="d-flex justify-content-center align-items-center col col-md-8">
-              <img className='w-75 h-100' src={img} />
+          <img className='w-75 h-100' src={img} />
         </div>
       </div>
     </div>

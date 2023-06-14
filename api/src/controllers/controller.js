@@ -7,7 +7,7 @@ const deleteProduct = require("./dashboard/products/deleteProduct.js");
 const getProducts = require("./shop/getProducts.js");
 const login = require("./user/login.js");
 const signin = require("./user/signin.js");
-
+const getUser = require("./user/getUser.js");
 // EXPORT CONTROLLER //
 const controller = {
     getCategories,
@@ -17,7 +17,8 @@ const controller = {
     deleteCategory,
     createCategory,
     createProduct,
-    deleteProduct
+    deleteProduct,
+    getUser
 }
 
 module.exports = controller;
